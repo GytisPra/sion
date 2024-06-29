@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "incremental": true,
+    "sourceMap": true,
+    "paths": {
+      "@auctions/*": ["auctions/*"],
+      "@authentication/*": ["authentication/*"],
+      "@bids/*": ["bids/*"],
+      "@categories/*": ["categories/*"],
+      "@comments/*": ["comments/*"],
+      "@database/*": ["database/*"],
+      "@decorators/*": ["decorators/*"],
+      "@enums/*": ["enums/*"],
+      "@files/*": ["files/*"],
+      "@healthcheck/*": ["healthcheck/*"],
+      "@items/*": ["items/*"],
+      "@mail/*": ["mail/*"],
+      "@users/*": ["users/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}

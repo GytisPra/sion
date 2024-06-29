@@ -1,0 +1,26 @@
+{
+  "login": "Login",
+  "register": "Register",
+  "help": {
+    "help": "Help",
+    "faq": "F.A.Q.",
+    "about": "Kas yra Pikensel?",
+    "how": "Kaip įkelti prekę?"
+  },
+  "myaccount": {
+    "myaccount": "My account"
+  },
+  "navbar": {
+    "shop": "Shop",
+    "categories": "Categories",
+    "hotOffers": "Hot Offers",
+    "hotSellers": "Hot Sellers",
+    "buy": "Buy",
+    "sell": "Sell"
+  },
+  "searchbar": {
+    "search": "Search",
+    "upload": "upload item",
+    "clear": "clear"
+  }
+}

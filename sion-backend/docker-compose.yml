@@ -1,0 +1,53 @@
+version: '3.9'
+services:
+  # sion-backend:
+  #   container_name: sion-backend
+  #   command: yarn start:dev
+  #   build:
+  #     context: .
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   env_file:
+  #     - docker.env
+  #   ports:
+  #     - '8000:8000'
+  #   networks:
+  #     - sion-backend-network
+  #   depends_on:
+  #     - redis
+  #     - postgres
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    env_file:
+      - docker.env
+    ports:
+      - '6379:6379'
+    networks:
+      - sion-backend-network
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    env_file:
+      - docker.env
+    ports:
+      - '5432:5432'
+    networks:
+      - sion-backend-network
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    env_file:
+      - docker.env
+    ports:
+      - '8080:80'
+    networks:
+      - sion-backend-network
+
+networks:
+  sion-backend-network:
+    driver: bridge

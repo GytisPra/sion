@@ -1,0 +1,64 @@
+version: 2.1
+orbs:
+  heroku: circleci/heroku@1.2.6
+  node: circleci/node@5.0.2
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - lint:
+          filters:
+            branches:
+              only:
+                - master
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - lint
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/node:16.13.0
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --immutable
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - .yarn/cache
+            - .yarn/unplugged
+            - ./node_modules
+            - ./.next/cache
+      - run:
+          name: 'Linting code'
+          command: yarn lint
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/deploy-via-git
+  build:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          check-cache: always
+          pkg-manager: yarn-berry

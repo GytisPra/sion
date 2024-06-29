@@ -1,0 +1,19 @@
+{
+  "createauction": "Sukurti aukcioną",
+  "defaultitemname": "Nepavadinta prekė",
+  "cancel": "Atšaukti",
+  "save": "Išsaugoti",
+  "upload": "Įkelti",
+  "drawermenu": {
+    "description": "Apibūdinkite savo prekę",
+    "details": "Detali informacija",
+    "price": "Aukciono kaina",
+    "duration": "Aukciono trukmė",
+    "delivery": "Siuntimas ir grąžinimas",
+    "additionalservices": "Mokamos paslaugos",
+    "notifications": "Pranešimų nustatymai"
+  },
+  "descriptionStep": {
+    "tooltip": "<b>Automatinis pratęsimas</b><br /><br />Jeigu yra atliekmas statymas<br />likus 5 min. iki aukciono<br />pabaigos, aukcionas yra<br />automatiškai pratęsiamas"
+  }
+}

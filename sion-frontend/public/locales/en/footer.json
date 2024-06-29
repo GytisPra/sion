@@ -1,0 +1,23 @@
+{
+  "about": {
+    "aboutApricot": "About Apricot",
+    "aboutus": "About us",
+    "contactUs": "Contact us",
+    "career": "Career",
+    "forBusiness": "For business"
+  },
+  "contacts": {
+    "contacts": "Contacts",
+    "message": "Message",
+    "call": "Call",
+    "requisites": "Requisites"
+  },
+  "help": {
+    "help": "Help",
+    "howDoes": "How does the auction work?",
+    "howTo": "How to upload a product?",
+    "faq": "F.A.Q"
+  },
+  "followUs": "Follow us",
+  "partners": "Our partners"
+}
